@@ -1,2 +1,6 @@
-# twitter-clone
-Twitter Clone 
+# Twitter Clone
+## Used Skills: :exclamation:
+* HTML
+* CSS
+* JS
+
