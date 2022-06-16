@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <!-- icons -->
+
+    <link rel="stylesheet" href="css/remixicon.css">
+
+    <!-- style -->
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        
+        <!-- links -->
+        <div class="nav-links">
+
+            <a href="#">
+                <img src="images/logo.svg" alt="" width="30">
+            </a>
+            
+            <a href="#">
+                <i class="ri-home-7-line"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#">
+                <i class="ri-hashtag"></i>
+                <span class="explore">Explore</Em></span>
+            </a>
+
+            <a href="#">
+                <i class="ri-notification-2-line"></i>
+                <span>Notifications</span>
+            </a>
+
+            <a href="#">
+                <i class="ri-mail-line"></i>
+                <span>Messages</span>
+            </a>
+
+            <a href="#">
+                <i class="ri-bookmark-line"></i>
+                <span>Bookmarks</span>
+            </a>
+
+            <a href="#">
+                <i class="ri-file-list-2-line"></i>
+                <span>Lists</span>
+            </a>
+
+            <a href="#">
+                <i class="ri-user-line"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="#">
+                <i class="ri-more-line"></i>
+                <span>More</span>
+            </a>
+            <button class="tweet-btn">
+                Tweet
+            </button>
+            
+        </div>
+        
+        <!-- account -->
+        <div class="main-account">
+            <a href="">
+                <img class="tweet-img" src="images/twetterrr.png" width="40px" height="40px" alt="" >
+                <div class="account-details">
+                    <span class="account-name">Amal Mousa</span>
+                    <span class="account-handle">@amal.sattari</span>
+                </div>
+                <i class="ri-more-line"></i>
+
+            </a>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+
+        <div class="main-flex">
+            <div class="main-feed">
+                <div class="homebar">
+                    <span>Home</span>
+                    <i class="ri-bubble-chart-fill"></i>
+                </div>
+                 <!-- popup -->
+                  <div class="popup" id="popup-1">
+                      <div class="overlay">
+                        <div class="contetnt">
+                           <button class="close-btn" id="closeBtn">&times;</button>
+                           <div class="new-tweet">
+                            <img class="tweet-img" src="images/twetterrr.png" width="50px" height="50px">
+                            <div class="new-tweet-details">
+                                <input type="text"  placeholder="What's happening?">
+                                <div class="new-tweet-actions popup-actions">
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <i class="ri-image-line"></i>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <i class="ri-file-gif-line"></i>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <i class="ri-bar-chart-horizontal-fill"></i>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <i class="ri-emotion-line"></i>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <i class="ri-calendar-line"></i>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <i class="ri-map-pin-line"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <button class="tweet-btn"  >Tweet</button>    
+                                </div>
+                            </div>
+                        </div> 
+                        </div>
+                      </div>
+                  </div>
+                <div class="new-tweet">
+                    <img class="tweet-img" src="images/twetterrr.png" width="50px" height="50px">
+                    <div class="new-tweet-details">
+                        <form onsubmit="return false">
+                            <input type="text" id="tweetInput" placeholder="What's happening?">
+                        <div class="new-tweet-actions">
+                            <ul>
+                                <li>
+                                    <button>
+                                        <i class="ri-image-line"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="ri-file-gif-line"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="ri-bar-chart-horizontal-fill"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="ri-emotion-line"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="ri-calendar-line"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="ri-map-pin-line"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <button class="tweet-btn " id="addTweetBtn">Add</button>    
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="new-tweet-divider"></div>
+                <div class="news-feed">
+                  <div class="newsfeed" id="newsFeed"></div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> In the last 45 days, I got interviewed by 5 companies. Given 20 rounds of interviews, cleared every single world.
+    
+                                    Now,I have 5 offers in hand,1 FullStack, & 4 Frontend roles.
+                                    
+                                    I've created a detailed DOCUMENT to share asked questions, & tips to answer
+                                    
+                                    Link in the next tweet👇🏻 
+                                </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p>Graphic design tip: everything is worthless unless we pretend </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-tweet">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <a href="#" class="twitter-name">
+                                    Amal Mousa
+                                    <span class="tweeter-handle">@amal.sattari .1h</span>
+                                </a>
+                                <i class="ri-more-fill"></i>
+                            </div>
+                            <div class="tweet-text">
+                                <p> I don't know who needs to hear this but you will be a great developer one day. </p>
+                            </div>
+                            <div class="tweet-icons">
+                                <button>
+                                    <i class="ri-chat-1-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-repeat-2-fill"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-heart-3-line"></i>
+                                </button>
+    
+                                <button>
+                                    <i class="ri-upload-2-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="side-feed">
+
+                <div class="search">
+                    <input type="text" placeholder="search twitter">
+                </div>
+
+                <div class="trending">
+                    <h1 class="h1-title">What's happening</h1>
+                    <div class="trending-item">
+                        <div class="trending-item-category">
+                            <span>Technology .Trending</span>
+                            <i class="ri-more-fill"></i>
+                        </div>
+                        <p>#softwaredeveloper</p>
+                        <span>100k Tweets</span>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-item-category">
+                            <span>Technology .Trending</span>
+                            <i class="ri-more-fill"></i>
+                        </div>
+                        <p>#softwaredeveloper</p>
+                        <span>100k Tweets</span>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-item-category">
+                            <span>Technology .Trending</span>
+                            <i class="ri-more-fill"></i>
+                        </div>
+                        <p>#softwaredeveloper</p>
+                        <span>100k Tweets</span>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-item-category">
+                            <span>Technology .Trending</span>
+                            <i class="ri-more-fill"></i>
+                        </div>
+                        <p>#softwaredeveloper</p>
+                        <span>100k Tweets</span>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-item-category">
+                            <span>Technology .Trending</span>
+                            <i class="ri-more-fill"></i>
+                        </div>
+                        <p>#softwaredeveloper</p>
+                        <span>100k Tweets</span>
+                    </div>
+                    <a href="#" class="show-more">
+                        Show more
+                    </a>
+                </div>
+                <div class="follow">
+                    <h1 class="h1-title">
+                        Who to follow
+                    </h1>
+
+                    <div class="follow-profile">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="follow-details">
+                            <a href="#">
+                                Amal Mousa
+                            </a>
+                            <span>@amal.sattari <span id="follows">
+                                follow you
+                            </span>
+                        </div>
+                        <button class="tweet-btn">follow</button>
+                    </div>
+                    <div class="follow-profile">
+                        <img class="tweet-img" src="images/twetterrr.png" width="45px" height="45px">
+                        <div class="follow-details">
+                            <a href="#">
+                                Amal Mousa
+                            </a>
+                            <span>@amal.sattari <span id="follows">
+                                follow you
+                            </span>
+                        </div>
+                        <button class="tweet-btn">follow</button>
+                    </div>
+                    <a href="#" class="show-more">
+                        Show more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <script src="js/popup.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+</html>
